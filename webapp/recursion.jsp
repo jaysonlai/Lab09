@@ -68,7 +68,7 @@
     {
         //TODO
         if(n <=1) {
-        return 1;
+        return n;
         }
 
         return fibonacci(n-1) + fibonacci(n-2);
@@ -162,7 +162,7 @@
         
     	//TODO
         --height;
-        return (int) Math.pow(branchingFactor,height) + nnaryTreeSize(branchingFactor,height - 1);
+        return (int) Math.pow(branchingFactor,height) + nnaryTreeSize(branchingFactor,height);
     }
     /** **********************************************************************
      * This function uses the Tree data structure defined above. This simply sums up the all

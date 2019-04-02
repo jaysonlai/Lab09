@@ -106,26 +106,26 @@
     
         public Tree(int value)
         {
-   	    //TODO
+	    //TODO
 	children = new ArrayList(value);
         }
     
         public int getValue()
         {
-    	    //TODO
+	    //TODO
 	return value;
 
         }
     
         public ArrayList<Tree> getChildren()
         {
-    	    //TODO
+         //TODO
 	return children;
         }
     
         public void add(Tree child)
         {
-    	    //TODO
+             //TODO
 	children.add(child);
         }
     }
@@ -160,11 +160,11 @@
     {
         if (height == 1) 
         {
-    	    //TODO
+       //TODO
 	return 1;
         }
         
-    	//TODO
+	//TODO
 	--height;
 	return (int) Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactor,  height -1);   
  }
@@ -179,7 +179,7 @@
      */
     public int treeSum(Tree tree)
     {
-    	//TODO 
+        //TODO 
 	int value = 0;
 		if(tree.getChildren().size() == 0 ) {
 	value += tree.getValue();

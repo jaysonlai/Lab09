@@ -185,7 +185,7 @@
 	val += tree.getValue();
 }
 
-		else (
+		else {
 		for(int index = 0; index  <tree.getChildren().size(); index++ ) {
 		val = val + treeSum(tree.getChildren().get(index));
 }

@@ -47,8 +47,8 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-else {
-return ((value)*factorial(value-1));
+	else {
+	return ((value)*factorial(value-1));
     }
 
     /** **********************************************************************
@@ -166,7 +166,7 @@ return ((value)*factorial(value-1));
         
     	//TODO
 	--height;
-	return (int) Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactors,  height -1);   
+	return (int) Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactor,  height -1);   
  }
 
     /** **********************************************************************

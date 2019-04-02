@@ -73,7 +73,7 @@
 	if (n <= 1) {		
 		return n;
 	}
-		return fibonacci(n-1)+fibonacci(n-2);
+		return fibonacci(n-1) + fibonacci(n-2);
     }
 
     
@@ -180,18 +180,18 @@
     public int treeSum(Tree tree)
     {
     	//TODO 
-	int val = 0;
+	int value = 0;
 		if(tree.getChildren().size() == 0 ) {
-	val += tree.getValue();
+	value += tree.getValue();
 }
 
 		else {
 		for(int index = 0; index  <tree.getChildren().size(); index++ ) {
-		val = val + treeSum(tree.getChildren().get(index));
+		value = value + treeSum(tree.getChildren().get(index));
 }
-		val += tree.getValue();
+		value += tree.getValue();
 }
-		return val;
+		return value;
     }
     
     /** **********************************************************************

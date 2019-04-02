@@ -6,7 +6,6 @@
 </head>
 <body style="BACKGROUND: url(images/bcgreeen1.GIF) repeat-x" height=938>
 <%!
-
     /**
      * Lab 08: Recursion Suite
      * 
@@ -16,7 +15,6 @@
      * @editer: Jayson Lai
      * @version 4/1/19
      */
-
     /** **********************************************************************
      * Function to compute the value n! of some input value n.
      * n! may bel defined as n! = 1 * 2 * ... * 2, 1! = 1.
@@ -34,10 +32,9 @@
          * This lets our recursion know when to stop.
          */
         //TODO
-	if(value <= 1) {
-	return 1;
-	}
-
+        if(value <= 1) {
+                return 1;
+        }
         /*
          * Here is the recursive statement. The function calls itself when the 
          * base case is not met.
@@ -47,10 +44,10 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-	else {
-	return ((value) * factorial(value-1));
+        else {
+            return ((value) * factorial(value-1));
+        }
     }
-}
     /** **********************************************************************
      * Computes the nth fibonacci number.
      * 
@@ -70,12 +67,12 @@
     public int fibonacci(int n)
     {
         //TODO
-	if (n <= 1) {		
-		return n;
-	}
-		return fibonacci(n-1) + fibonacci(n-2);
-    }
+        if(n <=1) {
+        return n;
+        }
 
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
     
     /** **********************************************************************
      * Class that represents a tree. This is a data structure comprised of 
@@ -106,27 +103,26 @@
     
         public Tree(int value)
         {
-	    //TODO
-	children = new ArrayList(value);
+    	    //TODO
+            children = new ArrayList(value);
         }
     
         public int getValue()
         {
-	    //TODO
-	return value;
-
+    	    //TODO
+            return value;
         }
     
         public ArrayList<Tree> getChildren()
         {
-         //TODO
-	return children;
+    	    //TODO
+            return children;
         }
     
         public void add(Tree child)
         {
-             //TODO
-	children.add(child);
+    	    //TODO
+            children.add(child);
         }
     }
     
@@ -158,17 +154,15 @@
      */
     public int nnaryTreeSize(int branchingFactor, int height)
     {
-        if (height == 1) 
-        {
-       //TODO
-	return 1;
+        if (height == 1) {
+    	    //TODO
+           return 1; 
         }
         
-	//TODO
-	--height;
-	return (int) Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactor,  height -1);   
- }
-
+    	//TODO
+        --height;
+        return (int) Math.pow(branchingFactor,height) + nnaryTreeSize(branchingFactor,height - 1);
+    }
     /** **********************************************************************
      * This function uses the Tree data structure defined above. This simply sums up the all
      * the values of the tree. Given an input tree, you need to compute the sum of its value,
@@ -179,19 +173,22 @@
      */
     public int treeSum(Tree tree)
     {
-        //TODO 
-	int value = 0;
-		if(tree.getChildren().size() == 0 ) {
-	value += tree.getValue();
-}
+    	//TODO
 
-		else {
-		for(int index = 0; index  <tree.getChildren().size(); index++ ) {
-		value = value + treeSum(tree.getChildren().get(index));
-}
-		value += tree.getValue();
-}
-		return value;
+        int value = 0;
+        if(tree.getChildren().size() == 0) {
+            value += tree.getValue();
+        }
+        else {
+
+            for(int index = 0; index < tree.getChildren().size(); index++ ) {
+                
+                 value += treeSum(tree.getChildren().get(index));   
+            }
+         value += tree.getValue();
+
+        }
+        return value;
     }
     
     /** **********************************************************************
@@ -272,10 +269,9 @@
          *  => width = 2 * x = 2 * y / sqrt(2) = sqrt(2) * y
          *  => width = sqrt(2) * <length>
          */
-        else 
-        {
-	return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);   
-          }
+        else {
+        	return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);
+    	}
     }
 %>
 <center>
@@ -287,17 +283,14 @@
     //Test recursion:
     out.println("<br />Value of 4! is: " + factorial(4));
     out.println("<br />Value of 10! is: " + factorial(10));
-
     // Test fibonacci:
     out.println("<br /><br />Value of fib(5) is: " + fibonacci(5));
     out.println("<br />Value of fib(10) is: " + fibonacci(10));
-
     // Test nnary tree sizes:
     out.println("<br /><br />The size of width 2, height 5 binary tree is: " + nnaryTreeSize(2, 5));
     out.println("<br />The size of width 3, height 5 binary tree is: " + nnaryTreeSize(3, 5));
     out.println("<br />The size of width 2, height 10 binary tree is: " + nnaryTreeSize(2, 10));
     out.println("<br />The size of width 3, height 10 binary tree is: " + nnaryTreeSize(3, 10));
-
     // Test tree summation:
     Tree root = new Tree(5);
     
@@ -316,7 +309,6 @@
     child1.add(child1_2);
     
     child2.add(child2_1);
-
     // Print results:
     out.println("<br /><br />Full tree sum is: " + treeSum(root));
     out.println("<br />Child1 tree sum is: " + treeSum(child1));

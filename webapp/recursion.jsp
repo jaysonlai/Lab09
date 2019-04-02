@@ -48,7 +48,7 @@
          */
         //TODO
 	else {
-	return ((value)*factorial(value-1));
+	return ((value) * factorial(value-1));
     }
 }
     /** **********************************************************************
@@ -274,8 +274,8 @@
          */
         else 
         {
-        	return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);
-    	}
+	return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);   
+          }
     }
 %>
 <center>

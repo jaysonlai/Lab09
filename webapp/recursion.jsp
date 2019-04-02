@@ -34,7 +34,9 @@
          * This lets our recursion know when to stop.
          */
         //TODO
-
+if(value <= 1) {
+return 1;
+}
 
         /*
          * Here is the recursive statement. The function calls itself when the 
@@ -45,7 +47,8 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
         //TODO
-
+else {
+return ((value)*factorial(value-1));
     }
 
     /** **********************************************************************
@@ -67,6 +70,10 @@
     public int fibonacci(int n)
     {
         //TODO
+if (n <= 1) {
+return n;
+}
+return fibonacci(n-1)+fibonacci(n-2);
     }
 
     
@@ -100,21 +107,26 @@
         public Tree(int value)
         {
     	    //TODO
+	children = new ArrayList(value);
         }
     
         public int getValue()
         {
     	    //TODO
+return value;
+
         }
     
         public ArrayList<Tree> getChildren()
         {
     	    //TODO
+	return children;
         }
     
         public void add(Tree child)
         {
     	    //TODO
+children.add(child);
         }
     }
     
@@ -149,10 +161,13 @@
         if (height == 1) 
         {
     	    //TODO
+return 1;
         }
         
     	//TODO
-    }
+	--height;
+return (int) (Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactors,  height -1));   
+ }
 
     /** **********************************************************************
      * This function uses the Tree data structure defined above. This simply sums up the all
@@ -164,7 +179,19 @@
      */
     public int treeSum(Tree tree)
     {
-    	//TODO
+    	//TODO 
+int val = 0;
+		if(tree.getChildren().size() == 0 ) {
+val += tree.getValue();
+}
+
+		else (
+		for(int index = 0; index  <tree.getChildren().size(); index++ ) {
+		val+=treeSum(tree.getChildren().get(index));
+}
+		val += tree.getValue();
+}
+		return val;
     }
     
     /** **********************************************************************

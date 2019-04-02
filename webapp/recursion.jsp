@@ -13,8 +13,8 @@
      * This lab tests your ability to implement recursion for several functions.
      * 
      * @authors: Stephen, Mukhtar, MoSho
-     * @editer: YOUR_NAME_HERE
-     * @version DATE_HERE
+     * @editer: Jayson Lai
+     * @version 4/1/19
      */
 
     /** **********************************************************************
@@ -70,10 +70,10 @@ return ((value)*factorial(value-1));
     public int fibonacci(int n)
     {
         //TODO
-if (n <= 1) {
-return n;
-}
-return fibonacci(n-1)+fibonacci(n-2);
+	if (n <= 1) {		
+		return n;
+	}
+		return fibonacci(n-1)+fibonacci(n-2);
     }
 
     
@@ -187,7 +187,7 @@ val += tree.getValue();
 
 		else (
 		for(int index = 0; index  <tree.getChildren().size(); index++ ) {
-		val+=treeSum(tree.getChildren().get(index));
+		val = val + treeSum(tree.getChildren().get(index));
 }
 		val += tree.getValue();
 }

@@ -34,9 +34,9 @@
          * This lets our recursion know when to stop.
          */
         //TODO
-if(value <= 1) {
-return 1;
-}
+	if(value <= 1) {
+	return 1;
+	}
 
         /*
          * Here is the recursive statement. The function calls itself when the 
@@ -106,14 +106,14 @@ return ((value)*factorial(value-1));
     
         public Tree(int value)
         {
-    	    //TODO
+   	    //TODO
 	children = new ArrayList(value);
         }
     
         public int getValue()
         {
     	    //TODO
-return value;
+	return value;
 
         }
     
@@ -126,7 +126,7 @@ return value;
         public void add(Tree child)
         {
     	    //TODO
-children.add(child);
+	children.add(child);
         }
     }
     
@@ -161,12 +161,12 @@ children.add(child);
         if (height == 1) 
         {
     	    //TODO
-return 1;
+	return 1;
         }
         
     	//TODO
 	--height;
-return (int) (Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactors,  height -1));   
+	return (int) Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactors,  height -1);   
  }
 
     /** **********************************************************************
@@ -180,9 +180,9 @@ return (int) (Math.pow(branchingFactor, height) + nnaryTreeSize(branchingFactors
     public int treeSum(Tree tree)
     {
     	//TODO 
-int val = 0;
+	int val = 0;
 		if(tree.getChildren().size() == 0 ) {
-val += tree.getValue();
+	val += tree.getValue();
 }
 
 		else (

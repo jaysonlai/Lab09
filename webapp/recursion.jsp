@@ -104,6 +104,7 @@
         public Tree(int value)
         {
     	    //TODO
+            this.value = value;
             children = new ArrayList(value);
         }
     
@@ -178,12 +179,13 @@
         int value = 0;
         if(tree.getChildren().size() == 0) {
             value += tree.getValue();
+            return value;
         }
         else {
 
             for(int index = 0; index < tree.getChildren().size(); index++ ) {
                 
-                 value += treeSum(tree.getChildren().get(index));   
+                 value = value +  treeSum(tree.getChildren().get(index));   
             }
          value += tree.getValue();
 
